@@ -1119,7 +1119,7 @@
     <button class="music-btn" id="musicBtn">🎵 Musik spielen</button>
 
     <!-- เพลงพื้นหลัง -->
-    <audio id="bgMusic" loop>
+    <audio id="bgMusic" loop autoplay>
         <source src="va.mp3" type="audio/mpeg">
     </audio>
 
@@ -1396,6 +1396,18 @@
         const bgMusic = document.getElementById('bgMusic');
         let isPlaying = false;
 
+        // ฟังก์ชันเริ่มเพลง
+        function startMusic() {
+            bgMusic.play().then(() => {
+                isPlaying = true;
+                musicBtn.textContent = '⏸️ Musik pausieren';
+                musicBtn.classList.add('playing');
+            }).catch(err => {
+                console.log('Autoplay blocked, showing button');
+                musicBtn.style.display = 'block';
+            });
+        }
+
         musicBtn.addEventListener('click', () => {
             if (isPlaying) {
                 bgMusic.pause();
@@ -1409,17 +1421,27 @@
             isPlaying = !isPlaying;
         });
 
-        // พยายามเล่นเพลงอัตโนมัติ
-        window.addEventListener('load', () => {
-            bgMusic.play().then(() => {
-                isPlaying = true;
-                musicBtn.textContent = '⏸️ Musik pausieren';
-                musicBtn.classList.add('playing');
-            }).catch(() => {
-                console.log('Bitte klicken Sie auf die Schaltfläche, um Musik abzuspielen');
-            });
+        // พยายามเล่นเพลงอัตโนมัติทันทีที่โหลดหน้า
+        document.addEventListener('DOMContentLoaded', () => {
+            // ซ่อนปุ่มไว้ก่อน
+            musicBtn.style.display = 'none';
+            
+            // พยายามเล่นเพลง
+            startMusic();
         });
+
+        // ถ้า user interact กับหน้าเว็บ ให้เล่นเพลง
+        document.addEventListener('click', () => {
+            if (!isPlaying) {
+                startMusic();
+            }
+        }, { once: true });
+
+        document.addEventListener('touchstart', () => {
+            if (!isPlaying) {
+                startMusic();
+            }
+        }, { once: true });
     </script>
 </body>
 </html>
-
