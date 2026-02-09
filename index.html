@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>💕 Für meine große Liebe 💕</title>
+    <title>💕 Für meine Karolina 💕</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600&family=Great+Vibes&display=swap" rel="stylesheet">
@@ -17,6 +17,19 @@
 
         html {
             scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Touch-friendly improvements */
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        button, a, .photo-item, .gallery-item, .memory-card, .video-item {
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         body {
@@ -344,21 +357,21 @@
         @keyframes glowPulse {
             0%, 100% {
                 box-shadow: 
-                    0 8px 32px rgba(255, 20, 147, 0.25),
-                    0 20px 70px rgba(255, 105, 180, 0.3),
-                    0 30px 90px rgba(255, 182, 193, 0.2),
-                    inset 0 2px 4px rgba(255, 255, 255, 1),
-                    inset 0 -2px 4px rgba(255, 192, 203, 0.15),
-                    0 0 100px rgba(255, 105, 180, 0.1);
+                    0 8px 32px rgba(255, 20, 147, 0.15),
+                    0 20px 70px rgba(255, 105, 180, 0.2),
+                    0 30px 90px rgba(255, 182, 193, 0.15),
+                    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+                    inset 0 -2px 4px rgba(255, 192, 203, 0.1),
+                    0 0 100px rgba(255, 105, 180, 0.08);
             }
             50% {
                 box-shadow: 
-                    0 8px 40px rgba(255, 20, 147, 0.4),
-                    0 20px 80px rgba(255, 105, 180, 0.45),
-                    0 30px 100px rgba(255, 182, 193, 0.35),
-                    inset 0 2px 4px rgba(255, 255, 255, 1),
-                    inset 0 -2px 4px rgba(255, 192, 203, 0.25),
-                    0 0 150px rgba(255, 20, 147, 0.25);
+                    0 8px 40px rgba(255, 20, 147, 0.25),
+                    0 20px 80px rgba(255, 105, 180, 0.3),
+                    0 30px 100px rgba(255, 182, 193, 0.25),
+                    inset 0 2px 4px rgba(255, 255, 255, 0.9),
+                    inset 0 -2px 4px rgba(255, 192, 203, 0.15),
+                    0 0 150px rgba(255, 20, 147, 0.15);
             }
         }
 
@@ -441,21 +454,21 @@
         .container {
             background: 
                 linear-gradient(135deg, 
-                    rgba(255, 255, 255, 0.85) 0%,
-                    rgba(255, 240, 245, 0.75) 50%,
-                    rgba(255, 255, 255, 0.85) 100%);
-            backdrop-filter: blur(30px) saturate(200%);
-            -webkit-backdrop-filter: blur(30px) saturate(200%);
+                    rgba(255, 255, 255, 0.55) 0%,
+                    rgba(255, 240, 245, 0.45) 50%,
+                    rgba(255, 255, 255, 0.55) 100%);
+            backdrop-filter: blur(15px) saturate(180%);
+            -webkit-backdrop-filter: blur(15px) saturate(180%);
             padding: 70px 60px;
             border-radius: 50px;
-            border: 3px solid rgba(255, 255, 255, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.6);
             box-shadow: 
-                0 8px 32px rgba(255, 20, 147, 0.25),
-                0 20px 70px rgba(255, 105, 180, 0.3),
-                0 30px 90px rgba(255, 182, 193, 0.2),
-                inset 0 2px 4px rgba(255, 255, 255, 1),
-                inset 0 -2px 4px rgba(255, 192, 203, 0.15),
-                0 0 100px rgba(255, 105, 180, 0.1);
+                0 8px 32px rgba(255, 20, 147, 0.15),
+                0 20px 70px rgba(255, 105, 180, 0.2),
+                0 30px 90px rgba(255, 182, 193, 0.15),
+                inset 0 2px 4px rgba(255, 255, 255, 0.8),
+                inset 0 -2px 4px rgba(255, 192, 203, 0.1),
+                0 0 100px rgba(255, 105, 180, 0.08);
             text-align: center;
             max-width: 750px;
             margin: 0 auto 60px;
@@ -700,72 +713,233 @@
         /* Responsive */
         @media (max-width: 768px) {
             body {
-                padding: 40px 15px;
+                padding: 30px 10px;
             }
 
             .container {
-                padding: 45px 35px;
-                margin: 0 auto 40px;
-                max-width: 92%;
+                padding: 40px 25px;
+                margin: 0 auto 30px;
+                max-width: 95%;
+                border-radius: 35px;
             }
 
             h1 {
-                font-size: 2.3em;
+                font-size: 2em;
+                letter-spacing: 1px;
             }
 
             .subtitle {
-                font-size: 1.5em;
+                font-size: 1.3em;
             }
 
             .message {
-                font-size: 1em;
-                padding: 0 10px;
+                font-size: 0.95em;
+                padding: 0 5px;
+                line-height: 2;
             }
 
             .message p {
-                padding-left: 25px;
+                padding-left: 28px;
+                margin: 12px 0;
+            }
+
+            .message p::before {
+                font-size: 1em;
             }
 
             .big-heart {
-                font-size: 75px;
+                font-size: 70px;
             }
 
             .heart-decoration {
-                font-size: 20px;
+                font-size: 18px;
             }
 
             .signature {
-                font-size: 1.6em;
+                font-size: 1.5em;
+            }
+
+            .date {
+                font-size: 0.85em;
             }
 
             .sticker {
-                font-size: 35px;
+                font-size: 30px;
             }
 
-            .gallery-item {
-                width: 100%;
-            }
-
-            .memory-card {
-                padding: 30px 25px;
-            }
-
+            /* Photo Gallery Mobile */
             .photo-gallery {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .photo-item:first-child {
+                grid-column: 1;
+                grid-row: auto;
+            }
+
+            .photo-item:first-child img {
+                height: 350px;
             }
 
             .photo-item img {
                 height: 280px;
             }
 
+            .photo-item {
+                border: 4px solid #fff;
+            }
+
+            .photo-heart {
+                font-size: 70px;
+            }
+
+            .photo-caption {
+                font-size: 1.8em;
+            }
+
+            .photo-tape {
+                width: 60px;
+                height: 20px;
+            }
+
+            /* Gallery Cards Mobile */
+            .gallery-item {
+                width: 100%;
+                padding: 25px 20px;
+            }
+
+            .gallery-emoji {
+                font-size: 50px;
+            }
+
+            .gallery-title {
+                font-size: 1.3em;
+            }
+
+            .gallery-text {
+                font-size: 0.95em;
+            }
+
+            /* Memory Cards Mobile */
+            .memory-card {
+                padding: 35px 25px;
+                margin-bottom: 30px;
+                border-radius: 30px;
+            }
+
+            .memory-date {
+                font-size: 1.5em;
+                margin-bottom: 15px;
+            }
+
+            .memory-text {
+                font-size: 1em;
+                line-height: 1.9;
+            }
+
+            /* Video Mobile */
             .video-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
 
+            .video-item {
+                padding: 20px;
+                border-radius: 25px;
+            }
+
+            .video-emoji {
+                font-size: 45px;
+            }
+
             .video-caption p {
                 font-size: 1.2em;
+            }
+
+            /* Final Message Mobile */
+            .final-message {
+                padding: 50px 30px;
+                margin: 60px auto 50px;
+                border-radius: 35px;
+            }
+
+            .final-emoji {
+                font-size: 80px;
+            }
+
+            .final-text {
+                font-size: 1.8em;
+                line-height: 1.5;
+            }
+
+            /* Section Titles Mobile */
+            .section-title {
+                font-size: 2.2em;
+                margin-bottom: 30px;
+            }
+
+            /* Scroll Indicator Mobile */
+            .scroll-indicator {
+                font-size: 35px;
+                bottom: 20px;
+            }
+
+            /* Reduce animations on mobile for better performance */
+            .photo-item:hover {
+                transform: translateY(-10px) scale(1.02);
+            }
+
+            .gallery-item:hover {
+                transform: translateY(-8px) scale(1.02);
+            }
+
+            .memory-card:hover {
+                transform: translateY(-5px);
+            }
+
+            .video-item:hover {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* Extra Small Mobile */
+        @media (max-width: 480px) {
+            .container {
+                padding: 35px 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            .subtitle {
+                font-size: 1.2em;
+            }
+
+            .message {
+                font-size: 0.9em;
+            }
+
+            .big-heart {
+                font-size: 60px;
+            }
+
+            .photo-item:first-child img {
+                height: 300px;
+            }
+
+            .photo-item img {
+                height: 250px;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .final-text {
+                font-size: 1.6em;
             }
         }
 
@@ -805,22 +979,74 @@
         /* Photo Gallery */
         .photo-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
             margin-top: 50px;
+        }
+
+        /* Featured Photo - รูปแรกใหญ่พิเศษ */
+        .photo-item:first-child {
+            grid-column: 1 / 3;
+            grid-row: 1 / 3;
+        }
+
+        .photo-item:first-child img {
+            height: 500px;
         }
 
         .photo-item {
             position: relative;
-            border-radius: 25px;
+            border-radius: 30px;
             overflow: hidden;
             box-shadow: 
-                0 10px 30px rgba(255, 105, 180, 0.2),
-                0 20px 50px rgba(255, 182, 193, 0.15);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+                0 10px 30px rgba(255, 105, 180, 0.25),
+                0 20px 50px rgba(255, 182, 193, 0.2);
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
             animation: fadeInUp 0.8s ease-out both;
-            background: rgba(255, 255, 255, 0.9);
-            border: 3px solid rgba(255, 255, 255, 0.8);
+            background: #fff;
+            border: 5px solid #fff;
+            transform-style: preserve-3d;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        /* Polaroid Style Frame */
+        .photo-item::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: 
+                linear-gradient(135deg, 
+                    rgba(255, 255, 255, 0.9) 0%,
+                    rgba(255, 240, 245, 0.8) 100%);
+            border-radius: 35px;
+            z-index: -1;
+            box-shadow: 
+                0 15px 40px rgba(255, 105, 180, 0.2),
+                inset 0 2px 4px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Decorative Corners */
+        .photo-item::after {
+            content: '💕';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 30px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 10;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+            pointer-events: none;
+        }
+
+        .photo-item:hover::after,
+        .photo-item:active::after {
+            opacity: 1;
+            transform: scale(1.2) rotate(15deg);
         }
 
         .photo-item:nth-child(1) { animation-delay: 0.1s; }
@@ -831,24 +1057,35 @@
         .photo-item:nth-child(6) { animation-delay: 0.6s; }
         .photo-item:nth-child(7) { animation-delay: 0.7s; }
 
+        /* Different heart for each photo */
+        .photo-item:nth-child(2)::after { content: '💖'; }
+        .photo-item:nth-child(3)::after { content: '💗'; }
+        .photo-item:nth-child(4)::after { content: '💓'; }
+        .photo-item:nth-child(5)::after { content: '💝'; }
+        .photo-item:nth-child(6)::after { content: '💞'; }
+        .photo-item:nth-child(7)::after { content: '💘'; }
+
         .photo-item img {
             width: 100%;
-            height: 350px;
+            height: 320px;
             object-fit: cover;
             display: block;
-            transition: transform 0.5s ease;
+            transition: transform 0.6s ease;
+            border-radius: 25px;
         }
 
-        .photo-item:hover {
-            transform: translateY(-15px) scale(1.03);
+        .photo-item:hover,
+        .photo-item:active {
+            transform: translateY(-15px) scale(1.05) rotate(2deg);
             box-shadow: 
-                0 20px 50px rgba(255, 20, 147, 0.35),
-                0 30px 80px rgba(255, 105, 180, 0.25);
+                0 25px 60px rgba(255, 20, 147, 0.4),
+                0 35px 90px rgba(255, 105, 180, 0.3);
             border-color: rgba(255, 192, 203, 1);
         }
 
-        .photo-item:hover img {
-            transform: scale(1.1);
+        .photo-item:hover img,
+        .photo-item:active img {
+            transform: scale(1.15);
         }
 
         .photo-overlay {
@@ -859,24 +1096,60 @@
             bottom: 0;
             background: linear-gradient(
                 135deg,
-                rgba(255, 105, 180, 0.7) 0%,
-                rgba(255, 20, 147, 0.6) 100%
+                rgba(255, 105, 180, 0.85) 0%,
+                rgba(255, 20, 147, 0.75) 100%
             );
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             opacity: 0;
-            transition: opacity 0.4s ease;
+            transition: opacity 0.5s ease;
+            border-radius: 25px;
+            pointer-events: none;
         }
 
-        .photo-item:hover .photo-overlay {
+        .photo-item:hover .photo-overlay,
+        .photo-item:active .photo-overlay {
             opacity: 1;
         }
 
         .photo-heart {
-            font-size: 80px;
+            font-size: 90px;
             animation: heartbeat 1s infinite;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.3));
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.4));
+            margin-bottom: 15px;
+        }
+
+        .photo-caption {
+            color: white;
+            font-family: 'Great Vibes', cursive;
+            font-size: 2em;
+            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.2s;
+        }
+
+        .photo-item:hover .photo-caption,
+        .photo-item:active .photo-caption {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Tape Effect on top */
+        .photo-tape {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 80px;
+            height: 25px;
+            background: rgba(255, 255, 255, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            backdrop-filter: blur(5px);
         }
 
         /* Video Section */
@@ -896,15 +1169,15 @@
         .video-item {
             background: 
                 linear-gradient(135deg, 
-                    rgba(255, 255, 255, 0.9) 0%,
-                    rgba(255, 240, 245, 0.85) 100%);
-            backdrop-filter: blur(25px);
+                    rgba(255, 255, 255, 0.6) 0%,
+                    rgba(255, 240, 245, 0.5) 100%);
+            backdrop-filter: blur(15px);
             border-radius: 35px;
             padding: 25px;
-            border: 3px solid rgba(255, 255, 255, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.6);
             box-shadow: 
-                0 15px 40px rgba(255, 105, 180, 0.25),
-                0 25px 70px rgba(255, 182, 193, 0.2);
+                0 15px 40px rgba(255, 105, 180, 0.18),
+                0 25px 70px rgba(255, 182, 193, 0.15);
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             animation: fadeInUp 1s ease-out both;
         }
@@ -965,16 +1238,16 @@
         .gallery-item {
             background: 
                 linear-gradient(135deg, 
-                    rgba(255, 255, 255, 0.9) 0%,
-                    rgba(255, 240, 245, 0.85) 100%);
-            backdrop-filter: blur(25px) saturate(180%);
+                    rgba(255, 255, 255, 0.6) 0%,
+                    rgba(255, 240, 245, 0.5) 100%);
+            backdrop-filter: blur(15px) saturate(180%);
             border-radius: 30px;
             padding: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.5);
             box-shadow: 
-                0 8px 32px rgba(255, 105, 180, 0.2),
-                0 15px 50px rgba(255, 182, 193, 0.15),
-                inset 0 1px 2px rgba(255, 255, 255, 1);
+                0 8px 32px rgba(255, 105, 180, 0.15),
+                0 15px 50px rgba(255, 182, 193, 0.12),
+                inset 0 1px 2px rgba(255, 255, 255, 0.8);
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
             animation: fadeInUp 1s ease-out both;
         }
@@ -1050,17 +1323,17 @@
         .memory-card {
             background: 
                 linear-gradient(135deg, 
-                    rgba(255, 255, 255, 0.88) 0%,
-                    rgba(255, 240, 245, 0.82) 100%);
-            backdrop-filter: blur(25px) saturate(180%);
+                    rgba(255, 255, 255, 0.58) 0%,
+                    rgba(255, 240, 245, 0.52) 100%);
+            backdrop-filter: blur(15px) saturate(180%);
             border-radius: 40px;
             padding: 50px 40px;
             margin-bottom: 40px;
-            border: 2px solid rgba(255, 255, 255, 0.7);
+            border: 2px solid rgba(255, 255, 255, 0.5);
             box-shadow: 
-                0 8px 32px rgba(255, 105, 180, 0.2),
-                0 20px 60px rgba(255, 182, 193, 0.18),
-                inset 0 1px 2px rgba(255, 255, 255, 1);
+                0 8px 32px rgba(255, 105, 180, 0.15),
+                0 20px 60px rgba(255, 182, 193, 0.13),
+                inset 0 1px 2px rgba(255, 255, 255, 0.8);
             animation: fadeInUp 1s ease-out both;
             position: relative;
             overflow: hidden;
@@ -1105,18 +1378,18 @@
             padding: 80px 60px;
             background: 
                 linear-gradient(135deg, 
-                    rgba(255, 255, 255, 0.9) 0%,
-                    rgba(255, 240, 245, 0.85) 50%,
-                    rgba(255, 255, 255, 0.9) 100%);
-            backdrop-filter: blur(30px) saturate(200%);
+                    rgba(255, 255, 255, 0.6) 0%,
+                    rgba(255, 240, 245, 0.5) 50%,
+                    rgba(255, 255, 255, 0.6) 100%);
+            backdrop-filter: blur(15px) saturate(200%);
             border-radius: 50px;
-            border: 3px solid rgba(255, 255, 255, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.6);
             box-shadow: 
-                0 8px 32px rgba(255, 20, 147, 0.3),
-                0 20px 70px rgba(255, 105, 180, 0.35),
-                0 30px 100px rgba(255, 182, 193, 0.25),
-                inset 0 2px 4px rgba(255, 255, 255, 1),
-                0 0 120px rgba(255, 105, 180, 0.15);
+                0 8px 32px rgba(255, 20, 147, 0.2),
+                0 20px 70px rgba(255, 105, 180, 0.25),
+                0 30px 100px rgba(255, 182, 193, 0.18),
+                inset 0 2px 4px rgba(255, 255, 255, 0.8),
+                0 0 120px rgba(255, 105, 180, 0.1);
             text-align: center;
             animation: fadeInScale 1.5s ease-out;
         }
@@ -1153,20 +1426,20 @@
             <span class="heart-decoration">💓</span>
             <span class="heart-decoration">💞</span>
         </div>
-        <h1>Für meine große Liebe</h1>
-        <div class="subtitle">Mein Herz gehört dir</div>
+        <h1>Für meine Karolina</h1>
+        <div class="subtitle">Mein Herz gehört nur dir</div>
         <div class="message">
-            <p>Du bist das Schönste, was mir je passiert ist. Jeden Tag, den ich mit dir verbringe, ist ein Geschenk.</p>
-            <p>Deine Augen sind wie Sterne, die meinen Weg erhellen, und dein Lächeln lässt mein Herz höher schlagen.</p>
-            <p class="highlight">Ich liebe dich mehr als Worte es jemals ausdrücken könnten 💕</p>
-            <p>Du bist mein Sonnenschein an regnerischen Tagen, meine Hoffnung in schweren Zeiten und mein größtes Glück.</p>
-            <p>Mit dir an meiner Seite fühle ich mich komplett. Du machst mich zu einem besseren Menschen.</p>
-            <p>Danke, dass du existierst. Danke, dass du mein bist. Ich verspreche dir, dich jeden Tag aufs Neue zu lieben.</p>
-            <p class="highlight">Für immer und ewig, mein Schatz 💖</p>
+            <p>Karolina, du bist das Schönste, was mir je passiert ist. Seit dem Tag, an dem ich dich kennengelernt habe, hat sich mein Leben verändert.</p>
+            <p>Deine Augen sind wie Sterne, die meinen Weg erhellen. Dein Lächeln lässt mein Herz höher schlagen und gibt mir Kraft für jeden Tag.</p>
+            <p class="highlight">Ich liebe dich mehr als Worte es jemals ausdrücken könnten, Karolina 💕</p>
+            <p>Du bist mein Sonnenschein an regnerischen Tagen, meine Hoffnung in schweren Zeiten und mein größtes Glück im Leben.</p>
+            <p>Mit dir an meiner Seite fühle ich mich komplett. Du machst mich zu einem besseren Menschen und zeigst mir jeden Tag, was wahre Liebe bedeutet.</p>
+            <p>Danke, dass du in mein Leben gekommen bist. Danke, dass du meine Karolina bist. Ich verspreche dir, dich jeden Tag aufs Neue zu lieben und zu beschützen.</p>
+            <p class="highlight">Für immer und ewig, meine wundervolle Karolina 💖</p>
         </div>
         <div class="signature">
             In ewiger Liebe,<br>
-            Dein Herz ❤️
+            Dein Baball ❤️
             <div class="date">Valentinstag 2026</div>
         </div>
     </div>
@@ -1176,45 +1449,59 @@
         <h2 class="section-title">Unsere schönsten Erinnerungen 💕</h2>
         <div class="photo-gallery">
             <div class="photo-item">
+                <div class="photo-tape"></div>
                 <img src="1.png" alt="Memory 1">
                 <div class="photo-overlay">
                     <span class="photo-heart">💖</span>
+                    <div class="photo-caption">Unvergesslich</div>
                 </div>
             </div>
             <div class="photo-item">
+                <div class="photo-tape"></div>
                 <img src="2.png" alt="Memory 2">
                 <div class="photo-overlay">
-                    <span class="photo-heart">💕</span>
+                    <span class="photo-heart">�</span>
+                    <div class="photo-caption">Magisch</div>
                 </div>
             </div>
             <div class="photo-item">
+                <div class="photo-tape"></div>
                 <img src="3.png" alt="Memory 3">
                 <div class="photo-overlay">
                     <span class="photo-heart">💗</span>
+                    <div class="photo-caption">Wunderschön</div>
                 </div>
             </div>
             <div class="photo-item">
+                <div class="photo-tape"></div>
                 <img src="4.png" alt="Memory 4">
                 <div class="photo-overlay">
-                    <span class="photo-heart">💓</span>
+                    <span class="photo-heart">�</span>
+                    <div class="photo-caption">Perfekt</div>
                 </div>
             </div>
             <div class="photo-item">
+                <div class="photo-tape"></div>
                 <img src="5.png" alt="Memory 5">
                 <div class="photo-overlay">
                     <span class="photo-heart">💝</span>
+                    <div class="photo-caption">Traumhaft</div>
                 </div>
             </div>
             <div class="photo-item">
+                <div class="photo-tape"></div>
                 <img src="6.png" alt="Memory 6">
                 <div class="photo-overlay">
                     <span class="photo-heart">💞</span>
+                    <div class="photo-caption">Bezaubernd</div>
                 </div>
             </div>
             <div class="photo-item">
+                <div class="photo-tape"></div>
                 <img src="7.png" alt="Memory 7">
                 <div class="photo-overlay">
                     <span class="photo-heart">💘</span>
+                    <div class="photo-caption">Für immer</div>
                 </div>
             </div>
         </div>
@@ -1231,7 +1518,7 @@
                 </video>
                 <div class="video-caption">
                     <span class="video-emoji">💖</span>
-                    <p>Unser magischer Moment</p>
+                    <p>Unser magischer Moment zusammen</p>
                 </div>
             </div>
             <div class="video-item">
@@ -1241,7 +1528,7 @@
                 </video>
                 <div class="video-caption">
                     <span class="video-emoji">✨</span>
-                    <p>Zusammen für immer</p>
+                    <p>Baball & Karolina - Für immer</p>
                 </div>
             </div>
         </div>
@@ -1276,26 +1563,26 @@
         <div class="memory-card">
             <div class="memory-date">Der erste Moment</div>
             <div class="memory-text">
-                Als ich dich zum ersten Mal sah, wusste ich sofort, dass du etwas Besonderes bist. 
-                Deine Augen, dein Lächeln - alles an dir hat mich verzaubert. 
-                In diesem Moment begann unsere wundervolle Geschichte.
+                Karolina, als ich dich zum ersten Mal sah, wusste ich sofort, dass du etwas ganz Besonderes bist. 
+                Deine Augen, dein Lächeln, deine ganze Art - alles an dir hat mich verzaubert. 
+                In diesem magischen Moment begann unsere wundervolle Liebesgeschichte.
             </div>
         </div>
 
         <div class="memory-card">
             <div class="memory-date">Unser erstes Date</div>
             <div class="memory-text">
-                Ich erinnere mich noch genau an die Schmetterlinge in meinem Bauch. 
-                Jedes Wort, jedes Lachen, jeder Blick - alles war perfekt. 
-                An diesem Tag wurde mir klar, dass ich den Rest meines Lebens mit dir verbringen möchte.
+                Ich erinnere mich noch genau an die Schmetterlinge in meinem Bauch, als ich dich sah. 
+                Jedes Wort, jedes Lachen, jeder Blick zwischen uns - alles war perfekt. 
+                An diesem Tag wurde mir klar, dass ich den Rest meines Lebens mit dir, Karolina, verbringen möchte.
             </div>
         </div>
 
         <div class="memory-card">
             <div class="memory-date">Jeden Tag mit dir</div>
             <div class="memory-text">
-                Jeder Moment mit dir ist ein Geschenk. Ob wir lachen, träumen oder einfach nur zusammen sind - 
-                du machst mein Leben vollkommen. Ich bin so dankbar für jeden Tag an deiner Seite.
+                Jeder Moment mit dir ist ein Geschenk, Karolina. Ob wir lachen, träumen oder einfach nur zusammen sind - 
+                du machst mein Leben vollkommen. Ich bin so dankbar für jeden Tag an deiner Seite und freue mich auf unsere gemeinsame Zukunft.
             </div>
         </div>
     </div>
@@ -1304,9 +1591,12 @@
     <div class="final-message">
         <div class="final-emoji">💖</div>
         <div class="final-text">
-            Ich liebe dich heute,<br>
+            Karolina,<br>
+            ich liebe dich heute,<br>
             morgen und für immer.<br>
-            Du bist mein Alles. ✨
+            Du bist mein Alles. ✨<br>
+            <br>
+            Dein Baball
         </div>
     </div>
 
