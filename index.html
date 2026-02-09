@@ -17,19 +17,6 @@
 
         html {
             scroll-behavior: smooth;
-            -webkit-text-size-adjust: 100%;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        /* Touch-friendly improvements */
-        * {
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        button, a, .photo-item, .gallery-item, .memory-card, .video-item {
-            -webkit-tap-highlight-color: transparent;
-            touch-action: manipulation;
         }
 
         body {
@@ -713,65 +700,59 @@
         /* Responsive */
         @media (max-width: 768px) {
             body {
-                padding: 30px 10px;
+                padding: 40px 15px;
             }
 
             .container {
-                padding: 40px 25px;
-                margin: 0 auto 30px;
-                max-width: 95%;
-                border-radius: 35px;
+                padding: 45px 35px;
+                margin: 0 auto 40px;
+                max-width: 92%;
             }
 
             h1 {
-                font-size: 2em;
-                letter-spacing: 1px;
+                font-size: 2.3em;
             }
 
             .subtitle {
-                font-size: 1.3em;
-            }
-
-            .message {
-                font-size: 0.95em;
-                padding: 0 5px;
-                line-height: 2;
-            }
-
-            .message p {
-                padding-left: 28px;
-                margin: 12px 0;
-            }
-
-            .message p::before {
-                font-size: 1em;
-            }
-
-            .big-heart {
-                font-size: 70px;
-            }
-
-            .heart-decoration {
-                font-size: 18px;
-            }
-
-            .signature {
                 font-size: 1.5em;
             }
 
-            .date {
-                font-size: 0.85em;
+            .message {
+                font-size: 1em;
+                padding: 0 10px;
+            }
+
+            .message p {
+                padding-left: 25px;
+            }
+
+            .big-heart {
+                font-size: 75px;
+            }
+
+            .heart-decoration {
+                font-size: 20px;
+            }
+
+            .signature {
+                font-size: 1.6em;
             }
 
             .sticker {
-                font-size: 30px;
+                font-size: 35px;
             }
 
-            /* Photo Gallery Mobile */
+            .gallery-item {
+                width: 100%;
+            }
+
+            .memory-card {
+                padding: 30px 25px;
+            }
+
             .photo-gallery {
                 grid-template-columns: 1fr;
-                gap: 30px;
-                margin-top: 30px;
+                gap: 25px;
             }
 
             .photo-item:first-child {
@@ -779,16 +760,9 @@
                 grid-row: auto;
             }
 
-            .photo-item:first-child img {
-                height: 350px;
-            }
-
+            .photo-item:first-child img,
             .photo-item img {
-                height: 280px;
-            }
-
-            .photo-item {
-                border: 4px solid #fff;
+                height: 300px;
             }
 
             .photo-heart {
@@ -796,150 +770,16 @@
             }
 
             .photo-caption {
-                font-size: 1.8em;
-            }
-
-            .photo-tape {
-                width: 60px;
-                height: 20px;
-            }
-
-            /* Gallery Cards Mobile */
-            .gallery-item {
-                width: 100%;
-                padding: 25px 20px;
-            }
-
-            .gallery-emoji {
-                font-size: 50px;
-            }
-
-            .gallery-title {
-                font-size: 1.3em;
-            }
-
-            .gallery-text {
-                font-size: 0.95em;
-            }
-
-            /* Memory Cards Mobile */
-            .memory-card {
-                padding: 35px 25px;
-                margin-bottom: 30px;
-                border-radius: 30px;
-            }
-
-            .memory-date {
                 font-size: 1.5em;
-                margin-bottom: 15px;
             }
 
-            .memory-text {
-                font-size: 1em;
-                line-height: 1.9;
-            }
-
-            /* Video Mobile */
             .video-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
 
-            .video-item {
-                padding: 20px;
-                border-radius: 25px;
-            }
-
-            .video-emoji {
-                font-size: 45px;
-            }
-
             .video-caption p {
                 font-size: 1.2em;
-            }
-
-            /* Final Message Mobile */
-            .final-message {
-                padding: 50px 30px;
-                margin: 60px auto 50px;
-                border-radius: 35px;
-            }
-
-            .final-emoji {
-                font-size: 80px;
-            }
-
-            .final-text {
-                font-size: 1.8em;
-                line-height: 1.5;
-            }
-
-            /* Section Titles Mobile */
-            .section-title {
-                font-size: 2.2em;
-                margin-bottom: 30px;
-            }
-
-            /* Scroll Indicator Mobile */
-            .scroll-indicator {
-                font-size: 35px;
-                bottom: 20px;
-            }
-
-            /* Reduce animations on mobile for better performance */
-            .photo-item:hover {
-                transform: translateY(-10px) scale(1.02);
-            }
-
-            .gallery-item:hover {
-                transform: translateY(-8px) scale(1.02);
-            }
-
-            .memory-card:hover {
-                transform: translateY(-5px);
-            }
-
-            .video-item:hover {
-                transform: translateY(-8px);
-            }
-        }
-
-        /* Extra Small Mobile */
-        @media (max-width: 480px) {
-            .container {
-                padding: 35px 20px;
-            }
-
-            h1 {
-                font-size: 1.8em;
-            }
-
-            .subtitle {
-                font-size: 1.2em;
-            }
-
-            .message {
-                font-size: 0.9em;
-            }
-
-            .big-heart {
-                font-size: 60px;
-            }
-
-            .photo-item:first-child img {
-                height: 300px;
-            }
-
-            .photo-item img {
-                height: 250px;
-            }
-
-            .section-title {
-                font-size: 2em;
-            }
-
-            .final-text {
-                font-size: 1.6em;
             }
         }
 
@@ -1006,8 +846,6 @@
             background: #fff;
             border: 5px solid #fff;
             transform-style: preserve-3d;
-            cursor: pointer;
-            -webkit-tap-highlight-color: transparent;
         }
 
         /* Polaroid Style Frame */
@@ -1040,11 +878,9 @@
             transition: all 0.3s ease;
             z-index: 10;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
-            pointer-events: none;
         }
 
-        .photo-item:hover::after,
-        .photo-item:active::after {
+        .photo-item:hover::after {
             opacity: 1;
             transform: scale(1.2) rotate(15deg);
         }
@@ -1074,8 +910,7 @@
             border-radius: 25px;
         }
 
-        .photo-item:hover,
-        .photo-item:active {
+        .photo-item:hover {
             transform: translateY(-15px) scale(1.05) rotate(2deg);
             box-shadow: 
                 0 25px 60px rgba(255, 20, 147, 0.4),
@@ -1083,8 +918,7 @@
             border-color: rgba(255, 192, 203, 1);
         }
 
-        .photo-item:hover img,
-        .photo-item:active img {
+        .photo-item:hover img {
             transform: scale(1.15);
         }
 
@@ -1106,11 +940,9 @@
             opacity: 0;
             transition: opacity 0.5s ease;
             border-radius: 25px;
-            pointer-events: none;
         }
 
-        .photo-item:hover .photo-overlay,
-        .photo-item:active .photo-overlay {
+        .photo-item:hover .photo-overlay {
             opacity: 1;
         }
 
@@ -1131,8 +963,7 @@
             transition: all 0.5s ease 0.2s;
         }
 
-        .photo-item:hover .photo-caption,
-        .photo-item:active .photo-caption {
+        .photo-item:hover .photo-caption {
             opacity: 1;
             transform: translateY(0);
         }
