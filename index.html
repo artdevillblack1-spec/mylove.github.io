@@ -647,53 +647,7 @@
         }
 
         /* ปุ่มเปิดเพลง */
-        .music-btn {
-            position: fixed;
-            bottom: 35px;
-            right: 35px;
-            background: linear-gradient(135deg, #ff6b9d 0%, #c44569 100%);
-            color: white;
-            border: none;
-            padding: 16px 28px;
-            border-radius: 50px;
-            font-size: 1em;
-            font-weight: 500;
-            cursor: pointer;
-            box-shadow: 
-                0 4px 15px rgba(255, 107, 157, 0.3),
-                0 8px 25px rgba(196, 69, 105, 0.2);
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        .music-btn:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 
-                0 6px 20px rgba(255, 107, 157, 0.4),
-                0 12px 35px rgba(196, 69, 105, 0.3);
-        }
-
-        .music-btn:active {
-            transform: translateY(-1px) scale(1.02);
-        }
-
-        .music-btn.playing {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                box-shadow: 
-                    0 4px 15px rgba(255, 107, 157, 0.3),
-                    0 8px 25px rgba(196, 69, 105, 0.2);
-            }
-            50% {
-                box-shadow: 
-                    0 6px 25px rgba(255, 107, 157, 0.5),
-                    0 12px 40px rgba(196, 69, 105, 0.4);
-            }
-        }
+        /* ลบออกแล้วเพราะเพลงเล่นอัตโนมัติ */
 
         /* ดอกกุหลาบตกลงมา */
         .rose {
@@ -782,13 +736,6 @@
 
             .signature {
                 font-size: 1.6em;
-            }
-
-            .music-btn {
-                bottom: 20px;
-                right: 20px;
-                padding: 14px 24px;
-                font-size: 0.9em;
             }
 
             .sticker {
@@ -1116,8 +1063,6 @@
         </div>
     </div>
 
-    <button class="music-btn" id="musicBtn">🎵 Musik spielen</button>
-
     <!-- เพลงพื้นหลัง -->
     <audio id="bgMusic" loop autoplay>
         <source src="va.mp3" type="audio/mpeg">
@@ -1391,57 +1336,22 @@
             setInterval(createShootingStar, 3000);
         });
 
-        // ควบคุมเพลง
-        const musicBtn = document.getElementById('musicBtn');
+        // เล่นเพลงอัตโนมัติ
         const bgMusic = document.getElementById('bgMusic');
-        let isPlaying = false;
-
-        // ฟังก์ชันเริ่มเพลง
-        function startMusic() {
-            bgMusic.play().then(() => {
-                isPlaying = true;
-                musicBtn.textContent = '⏸️ Musik pausieren';
-                musicBtn.classList.add('playing');
-            }).catch(err => {
-                console.log('Autoplay blocked, showing button');
-                musicBtn.style.display = 'block';
-            });
-        }
-
-        musicBtn.addEventListener('click', () => {
-            if (isPlaying) {
-                bgMusic.pause();
-                musicBtn.textContent = '🎵 Musik spielen';
-                musicBtn.classList.remove('playing');
-            } else {
-                bgMusic.play();
-                musicBtn.textContent = '⏸️ Musik pausieren';
-                musicBtn.classList.add('playing');
-            }
-            isPlaying = !isPlaying;
-        });
-
-        // พยายามเล่นเพลงอัตโนมัติทันทีที่โหลดหน้า
+        
+        // พยายามเล่นเพลงทันทีที่โหลดหน้า
         document.addEventListener('DOMContentLoaded', () => {
-            // ซ่อนปุ่มไว้ก่อน
-            musicBtn.style.display = 'none';
-            
-            // พยายามเล่นเพลง
-            startMusic();
+            bgMusic.play().catch(() => {
+                // ถ้า autoplay ถูกบล็อก ให้เล่นเมื่อ user interact
+                document.addEventListener('click', () => {
+                    bgMusic.play();
+                }, { once: true });
+                
+                document.addEventListener('touchstart', () => {
+                    bgMusic.play();
+                }, { once: true });
+            });
         });
-
-        // ถ้า user interact กับหน้าเว็บ ให้เล่นเพลง
-        document.addEventListener('click', () => {
-            if (!isPlaying) {
-                startMusic();
-            }
-        }, { once: true });
-
-        document.addEventListener('touchstart', () => {
-            if (!isPlaying) {
-                startMusic();
-            }
-        }, { once: true });
     </script>
 </body>
 </html>
